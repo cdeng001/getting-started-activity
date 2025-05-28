@@ -4,6 +4,10 @@ import {defineConfig} from 'vite';
 export default defineConfig({
   envDir: '../',
   server: {
+    allowedHosts: [
+      "regular-eel-brave.ngrok-free.app",
+      "pas-printing-finland-custom.trycloudflare.com",
+    ],
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
@@ -13,7 +17,7 @@ export default defineConfig({
       },
     },
     hmr: {
-      clientPort: 443,
+      clientPort: 5173,
     },
   },
 });
